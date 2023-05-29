@@ -1,22 +1,17 @@
 import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div`
-  ${({ theme }) => css`
-    /* opacity: 0;
-    height: 0; */
+  &.open {
+    width: 90%;
+    height: 100%;
 
-    &.open {
-      width: 90%;
-      height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      opacity: 1;
-    }
-  `}
+    opacity: 1;
+  }
 `;
 
 export const CardContainer = styled.div`

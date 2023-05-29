@@ -1,11 +1,9 @@
 import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div`
-  ${({ theme }) => css`
-    padding: 0 20px;
-    background: rgba(255, 255, 255, 0.15);
-    min-width: 100%;
-  `}
+  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.15);
+  min-width: 100%;
 `;
 
 type CoursesLength = {

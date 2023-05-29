@@ -408,231 +408,229 @@ export const DynamicContentWrapper = styled.div`
 `;
 
 export const DynamicWrapper = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    overflow: hidden;
-    border: 2px solid rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.7);
 
-    @keyframes ZeroToLast {
-      0% {
-        transform: translateX(0px);
-      }
-      100% {
-        transform: translateX(1344px);
-      }
+  @keyframes ZeroToLast {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(1344px);
+    }
+  }
+
+  @keyframes LastToZero {
+    0% {
+      transform: translateX(1344px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes LastToOne {
+    0% {
+      transform: translateX(1344px);
+    }
+    100% {
+      transform: translateX(672px);
+    }
+  }
+
+  @keyframes OneToLast {
+    0% {
+      transform: translateX(672px);
+    }
+    100% {
+      transform: translateX(1344px);
+    }
+  }
+
+  @keyframes ZeroToOne {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(672px);
+    }
+  }
+
+  @keyframes OneToZero {
+    0% {
+      transform: translateX(672px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes ZeroToMinus {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(-672px);
+    }
+  }
+
+  @keyframes MinusToZero {
+    0% {
+      transform: translateX(-672px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes MinusToFirst {
+    0% {
+      transform: translateX(-672px);
+    }
+    100% {
+      transform: translateX(-1344px);
+    }
+  }
+
+  @keyframes FirstToMinus {
+    0% {
+      transform: translateX(-1344px);
+    }
+    100% {
+      transform: translateX(-672px);
+    }
+  }
+
+  @keyframes ZeroToFirst {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-1344px);
+    }
+  }
+
+  @keyframes FirstToZero {
+    0% {
+      transform: translateX(-1344px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+  &.pastP.S {
+    #projects-container {
+      animation-name: ZeroToMinus;
+      animation-duration: 300ms;
+      animation-fill-mode: forwards;
     }
 
-    @keyframes LastToZero {
-      0% {
-        transform: translateX(1344px);
-      }
-      100% {
-        transform: translateX(0);
-      }
+    #skills-container {
+      animation-name: ZeroToMinus;
+      animation-duration: 300ms;
+      animation-fill-mode: forwards;
     }
 
-    @keyframes LastToOne {
-      0% {
-        transform: translateX(1344px);
-      }
-      100% {
-        transform: translateX(672px);
-      }
+    #corses-container {
+      transform: translateX(1344px);
+    }
+  }
+
+  &.pastS.P {
+    #projects-container {
+      animation-name: MinusToZero;
+      animation-duration: 300ms;
+      animation-fill-mode: forwards;
     }
 
-    @keyframes OneToLast {
-      0% {
-        transform: translateX(672px);
-      }
-      100% {
-        transform: translateX(1344px);
-      }
+    #skills-container {
+      animation-name: MinusToZero;
+      animation-duration: 300ms;
+      animation-fill-mode: forwards;
     }
 
-    @keyframes ZeroToOne {
-      0% {
-        transform: translateX(0px);
-      }
-      100% {
-        transform: translateX(672px);
-      }
+    #courses-container {
+      transform: translateX(0px);
+    }
+  }
+
+  &.pastS.C {
+    #projects-container {
+      transform: translateX(672px);
     }
 
-    @keyframes OneToZero {
-      0% {
-        transform: translateX(672px);
-      }
-      100% {
-        transform: translateX(0);
-      }
+    #skills-container {
+      animation-name: MinusToFirst;
+      animation-duration: 300ms;
+      animation-fill-mode: forwards;
     }
 
-    @keyframes ZeroToMinus {
-      0% {
-        transform: translateX(0px);
-      }
-      100% {
-        transform: translateX(-672px);
-      }
+    #courses-container {
+      animation-name: LastToOne;
+      animation-duration: 300ms;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &.pastC.S {
+    #projects-container {
+      transform: translateX(-672px);
     }
 
-    @keyframes MinusToZero {
-      0% {
-        transform: translateX(-672px);
-      }
-      100% {
-        transform: translateX(0px);
-      }
+    #skills-container {
+      animation-name: FirstToMinus;
+      animation-duration: 300ms;
+      animation-fill-mode: forwards;
     }
 
-    @keyframes MinusToFirst {
-      0% {
-        transform: translateX(-672px);
-      }
-      100% {
-        transform: translateX(-1344px);
-      }
+    #courses-container {
+      animation-name: OneToLast;
+      animation-duration: 300ms;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &.pastP.C {
+    #projects-container {
+      animation-name: ZeroToOne;
+      animation-duration: 300ms;
+      animation-fill-mode: forwards;
     }
 
-    @keyframes FirstToMinus {
-      0% {
-        transform: translateX(-1344px);
-      }
-      100% {
-        transform: translateX(-672px);
-      }
+    #skills-container {
+      animation-name: ZeroToFirst;
+      animation-duration: 0ms;
+      animation-fill-mode: forwards;
     }
 
-    @keyframes ZeroToFirst {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-1344px);
-      }
+    #courses-container {
+      animation-name: ZeroToOne;
+      animation-duration: 300ms;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &.pastC.P {
+    #projects-container {
+      animation-name: OneToZero;
+      animation-duration: 300ms;
+      animation-fill-mode: forwards;
     }
 
-    @keyframes FirstToZero {
-      0% {
-        transform: translateX(-1344px);
-      }
-      100% {
-        transform: translateX(0px);
-      }
+    #skills-container {
+      animation-name: FirstToZero;
+      animation-duration: 0ms;
+      animation-fill-mode: forwards;
     }
 
-    &.pastP.S {
-      #projects-container {
-        animation-name: ZeroToMinus;
-        animation-duration: 300ms;
-        animation-fill-mode: forwards;
-      }
-
-      #skills-container {
-        animation-name: ZeroToMinus;
-        animation-duration: 300ms;
-        animation-fill-mode: forwards;
-      }
-
-      #corses-container {
-        transform: translateX(1344px);
-      }
+    #courses-container {
+      animation-name: OneToZero;
+      animation-duration: 300ms;
+      animation-fill-mode: forwards;
     }
-
-    &.pastS.P {
-      #projects-container {
-        animation-name: MinusToZero;
-        animation-duration: 300ms;
-        animation-fill-mode: forwards;
-      }
-
-      #skills-container {
-        animation-name: MinusToZero;
-        animation-duration: 300ms;
-        animation-fill-mode: forwards;
-      }
-
-      #courses-container {
-        transform: translateX(0px);
-      }
-    }
-
-    &.pastS.C {
-      #projects-container {
-        transform: translateX(672px);
-      }
-
-      #skills-container {
-        animation-name: MinusToFirst;
-        animation-duration: 300ms;
-        animation-fill-mode: forwards;
-      }
-
-      #courses-container {
-        animation-name: LastToOne;
-        animation-duration: 300ms;
-        animation-fill-mode: forwards;
-      }
-    }
-
-    &.pastC.S {
-      #projects-container {
-        transform: translateX(-672px);
-      }
-
-      #skills-container {
-        animation-name: FirstToMinus;
-        animation-duration: 300ms;
-        animation-fill-mode: forwards;
-      }
-
-      #courses-container {
-        animation-name: OneToLast;
-        animation-duration: 300ms;
-        animation-fill-mode: forwards;
-      }
-    }
-
-    &.pastP.C {
-      #projects-container {
-        animation-name: ZeroToOne;
-        animation-duration: 300ms;
-        animation-fill-mode: forwards;
-      }
-
-      #skills-container {
-        animation-name: ZeroToFirst;
-        animation-duration: 0ms;
-        animation-fill-mode: forwards;
-      }
-
-      #courses-container {
-        animation-name: ZeroToOne;
-        animation-duration: 300ms;
-        animation-fill-mode: forwards;
-      }
-    }
-
-    &.pastC.P {
-      #projects-container {
-        animation-name: OneToZero;
-        animation-duration: 300ms;
-        animation-fill-mode: forwards;
-      }
-
-      #skills-container {
-        animation-name: FirstToZero;
-        animation-duration: 0ms;
-        animation-fill-mode: forwards;
-      }
-
-      #courses-container {
-        animation-name: OneToZero;
-        animation-duration: 300ms;
-        animation-fill-mode: forwards;
-      }
-    }
-  `}
+  }
 `;
