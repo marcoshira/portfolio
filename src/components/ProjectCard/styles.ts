@@ -1,61 +1,71 @@
 import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.div`
-  &.open {
-    width: 90%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    opacity: 1;
-  }
-`;
-
 export const CardContainer = styled.div`
   ${({ theme }) => css`
-    width: 90%;
-    height: 100%;
+    width: 40vw;
+    height: 40vh;
+    color: white;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: ${theme.transitions.slow};
+    position: relative;
+    border-radius: 10px;
 
-    opacity: 1;
+    &:hover {
+      border: 1px solid white;
+      img {
+        opacity: 0;
+      }
 
-    color: black;
-
+      div {
+        opacity: 1;
+      }
+    }
     img {
-      width: 400px;
-      margin-bottom: 10px;
+      width: 40vw;
+      height: 40vh;
+      position: absolute;
+      transition: ${theme.transitions.normal};
+      border-radius: 10px;
+    }
+  `}
+`;
+
+export const CardContainerContent = styled.div`
+  ${({ theme }) => css`
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40vw;
+    height: 30vh;
+
+    opacity: 0;
+    transition: ${theme.transitions.slow};
+
+    &:hover {
+      opacity: 1;
     }
 
     a {
       h2 {
+        color: white;
         margin: 0;
       }
-      color: black;
-      margin-bottom: 30px;
-
       transition: all 300ms ease-in-out;
 
       &:hover {
-        /* color: #ef626c; */
-        color: ${theme.colors.primaryColor};
-      }
-
-      &.imagelink {
-        margin-bottom: 0;
+        cursor: pointer;
       }
     }
 
     p {
       width: 90%;
-      text-align: justify;
-      margin-bottom: 15px;
+      text-align: center;
     }
 
     .skills {
@@ -64,7 +74,6 @@ export const CardContainer = styled.div`
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      margin-bottom: 25px;
 
       svg {
         height: 35px;

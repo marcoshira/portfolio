@@ -11,7 +11,8 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 *::-webkit-scrollbar {
-  width: 0;
+  width: 0px;
+  height: 0px;
 }
 
 *::-webkit-scrollbar-track {
@@ -23,13 +24,11 @@ export const GlobalStyles = createGlobalStyle`
   border: none;
 }
 
-* {
-  -ms-overflow-style: none;
-}
 
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  
 }
 
 
@@ -38,35 +37,25 @@ body{
   font-family: ${({ theme }) => theme.font.family.default};
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent), url(./assets/images/background.jpg);
   background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  color: ${({ theme }) => theme.colors.secondaryColor};
-  font-weight: 300;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-weight: 400;
+  
 }
 
 h1, h2, h3, h4, h5, h6{
   font-family: ${({ theme }) => theme.font.family.default};
   margin: ${({ theme }) => theme.spacings.large} 0;
-  font-weight: 200;
 }
 
 p{
   margin: ${({ theme }) => theme.spacings.medium} 0;
 }
 
-ul, ol{
-  margin: ${({ theme }) => theme.spacings.medium};
-  padding: ${({ theme }) => theme.spacings.medium};
-}
 
 a{
   text-decoration: none;
-}
-
-.table {
-  width: 100%;
-  overflow-y: auto;
+  
 }
 
 `;

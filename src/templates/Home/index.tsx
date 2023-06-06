@@ -1,33 +1,13 @@
 import * as Styled from './styles';
 import { useState } from 'react';
-import { ProjectWrapper } from '../../components/ProjectWrapper';
-import { ProjectCardProps } from '../../components/ProjectCard';
 import { Course, CoursesWrapper } from '../../components/CoursesWrapper';
 import { SkillsWrapper } from '../../components/SkillsWrapper';
 import { Skill } from '../../components/SkillsIcon';
+import { About } from '../About';
+import { Menu } from '../../components/Menu';
+import { Projects } from '../Projects';
 
 export function Home() {
-  const activeProjects = [
-    {
-      title: 'Course Completion Thesis',
-      altImg: 'Course Completion Thesis website cover',
-      description:
-        "University Completion Thesis website. It calculates a pile's lateral resistance, toe resistance, bearing capacity and allowable load, based on user inputs.",
-      link: 'https://estaca-web.vercel.app/',
-      srcImg: './assets/images/tcc-cover.png',
-      skills: ['TypeScript', 'React.js', 'CSS'],
-    },
-    {
-      title: 'Practice Landing Pages',
-      altImg: 'Practice Landing Pages cover',
-      description:
-        'Practice Landing Pages website. My first project using React.js and TypeScript.',
-      link: 'https://landing-page-next-mmh.vercel.app/',
-      srcImg: './assets/images/lp-cover.png',
-      skills: ['TypeScript', 'React.js', 'CSS', 'PostgreSQL'],
-    },
-  ] as ProjectCardProps[];
-
   const activeCourses = [
     {
       certificateLink:
@@ -88,78 +68,16 @@ export function Home() {
     'PostgreSQL',
   ] as Skill[];
 
-  const [active, setActive] = useState('P');
+  const [active, setActive] = useState('About');
   const [pastActive, setPastActive] = useState('');
 
   return (
-    <Styled.Wrapper>
-      <Styled.StaticContentWrapper>
-        <h1>Welcome</h1>
-        <p>
-          My name is Marcos Hirazawa, I&apos;m 23 years old and I&apos;m a full
-          stack developer based in Londrina, Paraná, Brazil. I&apos;ve been
-          studying programming for 2 years and I&apos;ve gathered around 500
-          hours between studying and projects. My main skills are React.js,
-          Node.js and TypeScript, but I&apos;m always trying to broaden my
-          knowledge. I have a degree in civil engineering but my interest lies
-          at the technology area, therefore I&apos;m getting another degree in
-          data science and artificial intelligence with plans to graduate by
-          2026. I&apos;m mainly interested at the web and app development, but
-          my goal is to get into the tech area so I can learn even more.
-        </p>
-      </Styled.StaticContentWrapper>
-      <Styled.DynamicContentWrapper>
-        <div className="border">
-          <div className="upperleft"></div>
-          <div className="uppermiddle"></div>
-          <div className="upperright"></div>
-          <div className="middleleft"></div>
-          <div className="middle"></div>
-          <div className="middleright"></div>
-          <div className="downleft"></div>
-          <div className="downmiddle"></div>
-          <div className="downright"></div>
-          <div className="content">
-            <div className="title">
-              <a
-                className={`past${pastActive} ${active}`}
-                id="Courses"
-                onClick={() => {
-                  setPastActive(active);
-                  setActive('C');
-                }}
-              >
-                <h2 className={active === 'C' ? 'active' : ''}>Courses</h2>
-              </a>
-              <a
-                className={`past${pastActive} ${active}`}
-                id="Projects"
-                onClick={() => {
-                  setPastActive(active);
-                  setActive('P');
-                }}
-              >
-                <h2 className={active === 'P' ? 'active' : ''}>Projects</h2>
-              </a>
-              <a
-                className={`past${pastActive} ${active}`}
-                id="Skills"
-                onClick={() => {
-                  setPastActive(active);
-                  setActive('S');
-                }}
-              >
-                <h2 className={active === 'S' ? 'active' : ''}>Skills</h2>
-              </a>
-            </div>
-            <Styled.DynamicWrapper className={`past${pastActive} ${active}`}>
-              <CoursesWrapper courses={activeCourses} />
-              <ProjectWrapper projects={activeProjects} />
-              <SkillsWrapper skills={activeSkills} />
-            </Styled.DynamicWrapper>
-          </div>
-        </div>
-      </Styled.DynamicContentWrapper>
-    </Styled.Wrapper>
+    <Styled.HomeWrapper>
+      <Menu onClickA={setActive} />
+      <Styled.Wrapper section={active}>
+        <About />
+        <Projects />
+      </Styled.Wrapper>
+    </Styled.HomeWrapper>
   );
 }
