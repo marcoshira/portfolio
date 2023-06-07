@@ -5,6 +5,7 @@ import { About } from '../About';
 import { Menu } from '../../components/Menu';
 import { Projects } from '../Projects';
 import { Skills } from '../Skills';
+import { Socials } from '../../components/Socials';
 
 export function Home() {
   const activeSkills = [
@@ -25,6 +26,7 @@ export function Home() {
   return (
     <Styled.HomeWrapper>
       <Menu onClickA={setActive} />
+      <Socials />
       <Styled.Wrapper section={active}>
         <About />
         <Projects />

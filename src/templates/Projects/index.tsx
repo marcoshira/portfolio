@@ -28,42 +28,6 @@ const activeProjects = [
     srcImg: './assets/images/lp-cover.png',
     skills: ['TypeScript', 'React.js', 'CSS', 'PostgreSQL'],
   },
-
-  {
-    title: 'Base Apparel Coming Soon Page',
-    altImg: 'Base Apparel Coming Soon Page',
-    description: 'Frontend Mentor Challenge.',
-    link: 'https://mmh-base-apparel.vercel.app/',
-    srcImg: './assets/images/apparel-cover.png',
-    skills: ['TypeScript', 'React.js', 'CSS'],
-  },
-
-  {
-    title: 'Base Apparel Coming Soon Page',
-    altImg: 'Base Apparel Coming Soon Page',
-    description: 'Frontend Mentor Challenge.',
-    link: 'https://mmh-base-apparel.vercel.app/',
-    srcImg: './assets/images/apparel-cover.png',
-    skills: ['TypeScript', 'React.js', 'CSS'],
-  },
-
-  {
-    title: 'Base Apparel Coming Soon Page',
-    altImg: 'Base Apparel Coming Soon Page',
-    description: 'Frontend Mentor Challenge.',
-    link: 'https://mmh-base-apparel.vercel.app/',
-    srcImg: './assets/images/apparel-cover.png',
-    skills: ['TypeScript', 'React.js', 'CSS'],
-  },
-
-  {
-    title: 'Base Apparel Coming Soon Page',
-    altImg: 'Base Apparel Coming Soon Page',
-    description: 'Frontend Mentor Challenge.',
-    link: 'https://mmh-base-apparel.vercel.app/',
-    srcImg: './assets/images/apparel-cover.png',
-    skills: ['TypeScript', 'React.js', 'CSS'],
-  },
 ] as ProjectCardProps[];
 
 export const Projects = () => {
