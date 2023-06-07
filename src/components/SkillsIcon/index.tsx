@@ -4,10 +4,15 @@ import { Nextdotjs as NextJs } from '@styled-icons/simple-icons/Nextdotjs';
 import { Nodedotjs as NodeJs } from '@styled-icons/simple-icons/Nodedotjs';
 import { Css3 } from '@styled-icons/boxicons-logos/Css3';
 import { Html5 } from '@styled-icons/boxicons-logos/Html5';
-import { Postgresql } from '@styled-icons/simple-icons/Postgresql';
+import { Database } from '@styled-icons/fa-solid/Database';
 import { ReactLogo } from '@styled-icons/boxicons-logos/ReactLogo';
 import { Angular } from '@styled-icons/boxicons-logos/Angular';
 import { Python } from '@styled-icons/boxicons-logos/Python';
+import { Pandas } from '@styled-icons/simple-icons/Pandas';
+import { Javascript } from '@styled-icons/simple-icons/Javascript';
+import { Numpy } from '@styled-icons/simple-icons/Numpy';
+import { Graphql } from '@styled-icons/simple-icons/Graphql';
+import { Express } from '@styled-icons/simple-icons/Express';
 
 export type Skill =
   | 'TypeScript'
@@ -15,9 +20,14 @@ export type Skill =
   | 'Next.js'
   | 'CSS'
   | 'HTML'
-  | 'PostgreSQL'
+  | 'Database'
   | 'React.js'
   | 'AngularJS'
+  | 'JavaScript'
+  | 'Pandas'
+  | 'Numpy'
+  | 'Graphql'
+  | 'Express'
   | 'Python';
 export type SkillsIconProps = {
   skills: Skill[];
@@ -64,11 +74,11 @@ export const SkillsIcon = ({ skills, showTitle = false }: SkillsIconProps) => {
                 {showTitle ? <p>HTML</p> : ''}
               </div>
             );
-          case 'PostgreSQL':
+          case 'Database':
             return (
               <div className="skill" key={index}>
-                <Postgresql />
-                {showTitle ? <p>PostgreSQL</p> : ''}
+                <Database />
+                {showTitle ? <p>Database</p> : ''}
               </div>
             );
           case 'React.js':
@@ -85,11 +95,46 @@ export const SkillsIcon = ({ skills, showTitle = false }: SkillsIconProps) => {
                 {showTitle ? <p>AngularJS</p> : ''}
               </div>
             );
+          case 'JavaScript':
+            return (
+              <div className="skill" key={index}>
+                <Javascript />
+                {showTitle ? <p>JavaScript</p> : ''}
+              </div>
+            );
           case 'Python':
             return (
               <div className="skill" key={index}>
                 <Python />
                 {showTitle ? <p>Python</p> : ''}
+              </div>
+            );
+          case 'Pandas':
+            return (
+              <div className="skill" key={index}>
+                <Pandas />
+                {showTitle ? <p>Pandas</p> : ''}
+              </div>
+            );
+          case 'Numpy':
+            return (
+              <div className="skill" key={index}>
+                <Numpy />
+                {showTitle ? <p>Numpy</p> : ''}
+              </div>
+            );
+          case 'Graphql':
+            return (
+              <div className="skill" key={index}>
+                <Graphql />
+                {showTitle ? <p>Graphql</p> : ''}
+              </div>
+            );
+          case 'Express':
+            return (
+              <div className="skill" key={index}>
+                <Express />
+                {showTitle ? <p>Express</p> : ''}
               </div>
             );
         }

@@ -20,11 +20,12 @@ export const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <Styled.CardContainer>
-      <img src={srcImg} alt={altImg} />
-      <Styled.CardContainerContent>
-        <a href={link} target="_blank" rel="noreferrer">
-          <h2>{title}</h2>
-        </a>
+      <a href={link} target="_blank" rel="noreferrer">
+        <img src={srcImg} alt={altImg} />
+      </a>
+
+      <Styled.CardContainerContent href={link} target="_blank">
+        <h2>{title}</h2>
         <p>{description}</p>
         <div className="skills">
           <p>Skills used:</p>

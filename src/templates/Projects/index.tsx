@@ -3,6 +3,14 @@ import * as Styled from './styles';
 
 const activeProjects = [
   {
+    title: 'Base Apparel Coming Soon Page',
+    altImg: 'Base Apparel Coming Soon Page',
+    description: 'Frontend Mentor Challenge.',
+    link: 'https://mmh-base-apparel.vercel.app/',
+    srcImg: './assets/images/apparel-cover.png',
+    skills: ['TypeScript', 'React.js', 'CSS'],
+  },
+  {
     title: 'Course Completion Thesis',
     altImg: 'Course Completion Thesis website cover',
     description:
@@ -19,14 +27,6 @@ const activeProjects = [
     link: 'https://landing-page-next-mmh.vercel.app/',
     srcImg: './assets/images/lp-cover.png',
     skills: ['TypeScript', 'React.js', 'CSS', 'PostgreSQL'],
-  },
-  {
-    title: 'Base Apparel Coming Soon Page',
-    altImg: 'Base Apparel Coming Soon Page',
-    description: 'Frontend Mentor Challenge.',
-    link: 'https://mmh-base-apparel.vercel.app/',
-    srcImg: './assets/images/apparel-cover.png',
-    skills: ['TypeScript', 'React.js', 'CSS'],
   },
 
   {

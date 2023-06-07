@@ -16,6 +16,7 @@ export const CardContainer = styled.div`
 
     &:hover {
       border: 1px solid white;
+      cursor: pointer;
       img {
         opacity: 0;
       }
@@ -24,18 +25,22 @@ export const CardContainer = styled.div`
         opacity: 1;
       }
     }
+    a {
+      position: absolute;
+    }
     img {
       width: 40vw;
       height: 40vh;
-      position: absolute;
+
       transition: ${theme.transitions.normal};
       border-radius: 10px;
     }
   `}
 `;
 
-export const CardContainerContent = styled.div`
+export const CardContainerContent = styled.a`
   ${({ theme }) => css`
+    color: white;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
@@ -49,19 +54,14 @@ export const CardContainerContent = styled.div`
 
     &:hover {
       opacity: 1;
+      cursor: pointer;
     }
 
-    a {
-      h2 {
-        color: white;
-        margin: 0;
-      }
-      transition: all 300ms ease-in-out;
-
-      &:hover {
-        cursor: pointer;
-      }
+    h2 {
+      color: white;
+      margin: 0;
     }
+    transition: all 300ms ease-in-out;
 
     p {
       width: 90%;

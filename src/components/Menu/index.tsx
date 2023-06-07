@@ -13,9 +13,9 @@ export const Menu = ({ onClickA }: MenuProps) => {
       <Styled.MenuItem onClick={() => onClickA('Skills')}>
         Skills
       </Styled.MenuItem>
-      <Styled.MenuItem onClick={() => onClickA('Courses')}>
+      {/* <Styled.MenuItem onClick={() => onClickA('Courses')}>
         Courses
-      </Styled.MenuItem>
+      </Styled.MenuItem> */}
     </Styled.Menu>
   );
 };

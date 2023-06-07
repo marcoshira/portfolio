@@ -13,12 +13,14 @@ const SectionDisplay = {
     `,
   Projects: () =>
     css`
-      transform: translateX(-50%);
+      transform: translateX(-33.33%);
       height: 100vh;
     `,
   Skills: () =>
     css`
-      transform: translateX(-0%);
+      transform: translateX(-66.67%);
+      height: 89vh;
+      transition: height 0ms ease 600ms, transform 600ms ease-in-out;
     `,
   Courses: () =>
     css`
@@ -35,7 +37,7 @@ export const Wrapper = styled.div<SectionDisplayed>`
     overflow-y: hidden;
     display: flex;
     flex-direction: row;
-    width: 200vw;
+    width: 300vw;
     padding-top: 8vh;
     transition: height 0ms, transform 600ms ease-in-out;
 

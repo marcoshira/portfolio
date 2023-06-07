@@ -6,6 +6,7 @@ import { Skill } from '../../components/SkillsIcon';
 import { About } from '../About';
 import { Menu } from '../../components/Menu';
 import { Projects } from '../Projects';
+import { Skills } from '../Skills';
 
 export function Home() {
   const activeCourses = [
@@ -77,6 +78,7 @@ export function Home() {
       <Styled.Wrapper section={active}>
         <About />
         <Projects />
+        <Skills />
       </Styled.Wrapper>
     </Styled.HomeWrapper>
   );
