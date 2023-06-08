@@ -39,7 +39,7 @@ export const CardContainer = styled.div`
     @media ${theme.media.mobile} {
       height: 170px;
       width: 90%;
-      margin: 0 5% 30px;
+      margin: 0 5% 10px;
 
       a {
       }

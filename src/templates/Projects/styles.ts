@@ -24,6 +24,7 @@ export const ProjectsWrapper = styled.div`
       flex-direction: column;
       justify-content: top;
       padding: 0;
+      margin-bottom: 60px;
 
       > h1 {
         display: inline;

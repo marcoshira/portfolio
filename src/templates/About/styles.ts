@@ -42,7 +42,7 @@ export const AboutText = styled.div`
       font-weight: 300;
     }
     @media ${theme.media.mobile} {
-      height: 95vh;
+      height: 97vh;
       justify-content: space-between;
       padding-top: 0px;
       width: 85%;
@@ -50,13 +50,23 @@ export const AboutText = styled.div`
       margin-bottom: 3vh;
 
       p {
-        line-height: 1.6;
+        line-height: 1.4;
         text-align: justify;
-        font-size: 15px;
+        font-size: 1.5rem;
         font-weight: 300;
+        position: absolute;
+        top: 41vh;
+        left: 0;
+        transform: translate(-50%)
+        width: 70vw;
+        padding: 0 10vw;
       }
 
       h1 {
+        position: absolute;
+        top: 0;
+        text-align: center;
+        left: 0;
         font-size: 50px;
       }
     }
@@ -68,9 +78,10 @@ export const AboutImg = styled.img`
     width: 32%;
 
     @media ${theme.media.mobile} {
-      width: 65%;
+      width: auto;
+      height: 20vh;
       position: absolute;
-      top: 120px;
+      top: 15vh;
     }
   `}
 `;
