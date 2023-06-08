@@ -7,7 +7,7 @@ export const ProjectsWrapper = styled.div`
     padding-right: 7.5vw;
     padding-top: 6vh;
     min-width: 100vw;
-    height: 95vh;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40vw, auto));
     column-gap: 5vw;

@@ -65,5 +65,20 @@ export const SkillCardWrapper = styled.div`
         margin-top: 0;
       }
     }
+
+    @media ${theme.media.monitor} {
+      h1 {
+        font-size: 36px;
+      }
+
+      img {
+        height: 190px;
+      }
+      ${Wrapper} {
+        svg {
+          height: 45px;
+        }
+      }
+    }
   `}
 `;

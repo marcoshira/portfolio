@@ -105,7 +105,6 @@ export const CardContainerContent = styled.a`
       height: 170px;
       width: 100%;
       p {
-        
         display: none;
       }
 
@@ -116,19 +115,24 @@ export const CardContainerContent = styled.a`
       }
 
       .skills {
-      width: 100%;
+        width: 100%;
 
-      svg {
-        height: 30px;
-        margin-left: 10px;
-      }
+        svg {
+          height: 30px;
+          margin-left: 10px;
+        }
 
-      p {
-        font-size: ${theme.font.sizes.ltmedium};
-        margin: 0;
-        width: 130px;
-        display: inline;
+        p {
+          font-size: ${theme.font.sizes.ltmedium};
+          margin: 0;
+          width: 130px;
+          display: inline;
+        }
       }
     }
+    @media ${theme.media.monitor} {
+      p {
+        font-size: 22px;
+      }
   `}
 `;

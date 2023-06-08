@@ -70,6 +70,12 @@ export const AboutText = styled.div`
         font-size: 50px;
       }
     }
+
+    @media ${theme.media.monitor} {
+      p {
+        font-size: 22px;
+      }
+    }
   `}
 `;
 
