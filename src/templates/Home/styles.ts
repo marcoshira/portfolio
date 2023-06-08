@@ -29,7 +29,10 @@ const SectionDisplay = {
 };
 
 export const HomeWrapper = styled.div`
-  ${({ theme }) => css``}
+  ${({ theme }) => css`
+  @media ${theme.media.mobile} {
+      position: relative;
+  `}
 `;
 
 export const Wrapper = styled.div<SectionDisplayed>`
@@ -42,5 +45,13 @@ export const Wrapper = styled.div<SectionDisplayed>`
     transition: height 0ms, transform 600ms ease-in-out;
 
     ${SectionDisplay[section]()}
+
+    @media ${theme.media.mobile} {
+      flex-direction: column;
+      height: auto;
+      width: 100vw;
+      padding-top: 10px;
+      transform: translateX(-0%);
+    }
   `}
 `;

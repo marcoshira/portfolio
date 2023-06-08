@@ -12,5 +12,24 @@ export const SkillsWrapper = styled.div`
     flex-direction: row;
     justify-content: space-between;
     color: white;
+
+    > h1 {
+      display: none;
+    }
+
+    @media ${theme.media.mobile} {
+      height: auto;
+      flex-direction: column;
+      padding-top: 0;
+      margin-bottom: 50px;
+
+      > h1 {
+        display: inline;
+        margin: 0px 0 40px;
+        text-align: center;
+        font-weight: 100;
+        font-size: 50px;
+      }
+    }
   `}
 `;

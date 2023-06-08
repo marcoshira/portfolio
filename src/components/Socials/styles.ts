@@ -28,5 +28,22 @@ export const SocialsWrapper = styled.div`
         }
       }
     }
+
+    @media ${theme.media.mobile} {
+      height: auto;
+      width: 100%;
+      position: absolute;
+      flex-direction: row;
+      justify-content: space-evenly;
+      top: auto;
+      bottom: 8px;
+
+      a {
+        margin: 0;
+        svg {
+          height: 50px;
+        }
+      }
+    }
   `}
 `;

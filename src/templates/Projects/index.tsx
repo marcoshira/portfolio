@@ -33,6 +33,7 @@ const activeProjects = [
 export const Projects = () => {
   return (
     <Styled.ProjectsWrapper>
+      <h1>Projects</h1>
       {activeProjects.map((project, index) => {
         return <ProjectCard {...project} key={index} />;
       })}

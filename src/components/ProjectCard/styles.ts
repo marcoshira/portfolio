@@ -35,6 +35,20 @@ export const CardContainer = styled.div`
       transition: ${theme.transitions.normal};
       border-radius: 10px;
     }
+
+    @media ${theme.media.mobile} {
+      height: 170px;
+      width: 90%;
+      margin: 0 5% 30px;
+
+      a {
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
   `}
 `;
 
@@ -84,6 +98,36 @@ export const CardContainerContent = styled.a`
         font-size: ${theme.font.sizes.ltmedium};
         margin: 0;
         width: 130px;
+      }
+    }
+
+    @media ${theme.media.mobile} {
+      height: 170px;
+      width: 100%;
+      p {
+        
+        display: none;
+      }
+
+      h2 {
+        font-weight: 300;
+        text-align: center;
+        font-size: 21px;
+      }
+
+      .skills {
+      width: 100%;
+
+      svg {
+        height: 30px;
+        margin-left: 10px;
+      }
+
+      p {
+        font-size: ${theme.font.sizes.ltmedium};
+        margin: 0;
+        width: 130px;
+        display: inline;
       }
     }
   `}

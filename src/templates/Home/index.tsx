@@ -26,12 +26,13 @@ export function Home() {
   return (
     <Styled.HomeWrapper>
       <Menu onClickA={setActive} />
-      <Socials />
+
       <Styled.Wrapper section={active}>
         <About />
         <Projects />
         <Skills />
       </Styled.Wrapper>
+      <Socials />
     </Styled.HomeWrapper>
   );
 }

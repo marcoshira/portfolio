@@ -7,6 +7,7 @@ export type SkillsProps = {
 export const Skills = ({ title }: SkillsProps) => {
   return (
     <Styled.SkillsWrapper>
+      <h1>Skills</h1>
       <SkillCard
         iconImg="./assets/images/frontendsvgred.svg"
         title="Front-end Development"

@@ -15,6 +15,10 @@ export const Menu = styled.div`
     height: 11vh;
     border-bottom: 0px solid white;
     /* box-shadow: 5px 0 15px 1px white; */
+
+    @media ${theme.media.mobile} {
+      display: none;
+    }
   `}
 `;
 
