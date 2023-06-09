@@ -35,6 +35,19 @@ export const CardContainer = styled.div`
       transition: ${theme.transitions.normal};
       border-radius: 10px;
     }
+    @media ${theme.media.ipad} {
+      height: 260px;
+      width: 80%;
+      margin: 0 10% 40px;
+
+      a {
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
 
     @media ${theme.media.mobile} {
       height: 170px;
@@ -98,6 +111,36 @@ export const CardContainerContent = styled.a`
         font-size: ${theme.font.sizes.ltmedium};
         margin: 0;
         width: 130px;
+      }
+    }
+
+    @media ${theme.media.ipad} {
+      height: 260px;
+      width: 80%;
+      p {
+        display: none;
+      }
+
+      h2 {
+        font-weight: 300;
+        text-align: center;
+        font-size: 30px;
+      }
+
+      .skills {
+        width: 100%;
+
+        svg {
+          height: 45px;
+          margin-left: 10px;
+        }
+
+        p {
+          font-size: 28px;
+          margin: 0;
+          width: 200px;
+          display: inline;
+        }
       }
     }
 

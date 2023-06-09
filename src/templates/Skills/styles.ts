@@ -17,6 +17,21 @@ export const SkillsWrapper = styled.div`
       display: none;
     }
 
+    @media ${theme.media.ipad} {
+      height: auto;
+      flex-direction: column;
+      padding-top: 0;
+      margin-bottom: 80px;
+
+      > h1 {
+        display: inline;
+        margin: 0px 0 40px;
+        text-align: center;
+        font-weight: 100;
+        font-size: 80px;
+      }
+    }
+
     @media ${theme.media.mobile} {
       height: auto;
       flex-direction: column;

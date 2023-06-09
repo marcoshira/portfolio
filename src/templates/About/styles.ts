@@ -11,6 +11,11 @@ export const About = styled.div`
     min-width: 100vw;
     padding-left: 5vw;
     padding-right: 5vw;
+    @media ${theme.media.ipad} {
+      height: auto;
+      flex-direction: column;
+      position: relative;
+    }
 
     @media ${theme.media.mobile} {
       height: auto;
@@ -40,6 +45,35 @@ export const AboutText = styled.div`
       text-align: justify;
       font-size: 18px;
       font-weight: 300;
+    }
+    @media ${theme.media.ipad} {
+      height: 97vh;
+      justify-content: space-between;
+      padding-top: 0px;
+      width: 85%;
+      text-align: center;
+      margin-bottom: 3vh;
+
+      p {
+        line-height: 1.4;
+        text-align: justify;
+        font-size: 2.4rem;
+        font-weight: 300;
+        position: absolute;
+        top: 55vh;
+        left: 0;
+        transform: translate(-50%)
+        width: 70vw;
+        padding: 0 10vw;
+      }
+
+      h1 {
+        position: absolute;
+        top: 3vh;
+        text-align: center;
+        left: 0;
+        font-size: 88px;
+      }
     }
     @media ${theme.media.mobile} {
       height: 97vh;
@@ -71,6 +105,7 @@ export const AboutText = styled.div`
       }
     }
 
+
     @media ${theme.media.monitor} {
       p {
         font-size: 22px;
@@ -82,6 +117,13 @@ export const AboutText = styled.div`
 export const AboutImg = styled.img`
   ${({ theme }) => css`
     width: 32%;
+
+    @media ${theme.media.ipad} {
+      width: auto;
+      height: 30vh;
+      position: absolute;
+      top: 20vh;
+    }
 
     @media ${theme.media.mobile} {
       width: auto;

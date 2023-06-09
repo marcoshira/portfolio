@@ -16,6 +16,9 @@ export const Menu = styled.div`
     border-bottom: 0px solid white;
     /* box-shadow: 5px 0 15px 1px white; */
 
+    @media ${theme.media.ipad} {
+      display: none;
+    }
     @media ${theme.media.mobile} {
       display: none;
     }

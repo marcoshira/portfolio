@@ -48,6 +48,32 @@ export const SkillCardWrapper = styled.div`
       }
     }
 
+    @media ${theme.media.ipad} {
+      height: 40vh;
+      width: 100%;
+      padding: 20px 0px;
+      margin-bottom: 30px;
+
+      img {
+        height: 150px;
+        width: 180px;
+        margin-bottom: 0px;
+        transition: ${theme.transitions.fast};
+      }
+
+      h1 {
+        width: 80%;
+        font-size: 50px;
+        margin-top: 0;
+      }
+
+      ${Wrapper} {
+        svg {
+          height: 55px;
+        }
+      }
+    }
+
     @media ${theme.media.mobile} {
       height: 40vh;
       width: 100%;
@@ -62,7 +88,15 @@ export const SkillCardWrapper = styled.div`
       }
 
       h1 {
+        width: 100%;
+        font-size: 25px;
         margin-top: 0;
+      }
+
+      ${Wrapper} {
+        svg {
+          height: 30px;
+        }
       }
     }
 

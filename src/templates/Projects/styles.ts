@@ -18,6 +18,24 @@ export const ProjectsWrapper = styled.div`
       display: none;
     }
 
+    @media ${theme.media.ipad} {
+      overflow-y: hidden;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: top;
+      padding: 0;
+      margin-bottom: 60px;
+
+      > h1 {
+        display: inline;
+        margin: 10px 0 40px;
+        text-align: center;
+        font-weight: 100;
+        font-size: 80px;
+      }
+    }
+
     @media ${theme.media.mobile} {
       height: auto;
       display: flex;

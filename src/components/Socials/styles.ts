@@ -29,6 +29,23 @@ export const SocialsWrapper = styled.div`
       }
     }
 
+    @media ${theme.media.ipad} {
+      height: auto;
+      width: 100%;
+      position: absolute;
+      flex-direction: row;
+      justify-content: space-evenly;
+      top: auto;
+      bottom: 8px;
+
+      a {
+        margin: 0;
+        svg {
+          height: 70px;
+        }
+      }
+    }
+
     @media ${theme.media.mobile} {
       height: auto;
       width: 100%;
@@ -41,7 +58,7 @@ export const SocialsWrapper = styled.div`
       a {
         margin: 0;
         svg {
-          height: 50px;
+          height: 45px;
         }
       }
     }
